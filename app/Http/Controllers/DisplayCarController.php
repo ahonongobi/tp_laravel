@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\DisplayCar;
+use App\Models\User;
 class DisplayCarController extends Controller
 {
     public function DisplayCar(){
       $car = DisplayCar::all();
+     
       $isAUth = "GobiEncryptnotAuthenticatedAndAcessTemporallyDeniedUntilYouLogIN.";
       return view('welcome',compact('car','isAUth'));
     }

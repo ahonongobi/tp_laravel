@@ -7,10 +7,20 @@
     <section class="py-5 text-center container">
       <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">Location de véhicule</h1>
+          @if ($isAUth=="GobiEncryptnotAuthenticatedAndAcessTemporallyDeniedUntilYouLogINIsOk.")
+          <h1>
+            <span>Bonjour, {{Auth::user()->name}}</span>
+          </h1>
+          @else
+          <h1>
+            <span>Location de vehicule</span>
+          </h1>
+          @endif
+          
+          
           <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
           <p>
-            <a href="#" class="btn btn-primary my-2"> <i class=" fa fa-phone"></i> Appelez nous</a>
+            <a href="{{'/register'}}" class="btn btn-primary my-2"> <i class=" fa fa-user-plus"></i> S'inscrire</a>
             @if($isAUth=="GobiEncryptnotAuthenticatedAndAcessTemporallyDeniedUntilYouLogINIsOk.")
             <a href="{{'/logout'}}" class="btn btn-danger my-2"><i class=" fa fa-power-off"></i> Se deconnecter</a>
   

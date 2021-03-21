@@ -5,6 +5,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="">
 <style>
     .table-wrapper {
     width: 900px;
@@ -152,7 +153,7 @@ table.table td .add {
                                             <td>(171) 555-2222</td>
                                             <td>
                                                 <a class="add" title="Ajouter" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                                                <a class="edit" title="Editer" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                                <a href="{{'/edit/'.$item->id}}" class="edit" title="Editer" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                                                 <a onclick="return confirm('êtes vous certain de cette action?')" href="{{'/delete/'.$item->id}}" class="delete" title="Supprimer" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                                             </td>
                                         </tr>  
