@@ -1,0 +1,12 @@
+
+---
+execution:
+  concurrency: 10
+  ramp-up: 1m
+  hold-for: 5m
+  iterations: 2
+
+scenarios:
+  simple-test:
+    requests:
+    - http://18.220.89.79/
